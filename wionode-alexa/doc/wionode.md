@@ -1,94 +1,94 @@
-# Wio Node + Alexa ƒnƒ“ƒYƒIƒ“
+# Wio Node + Alexa ãƒãƒ³ã‚ºã‚ªãƒ³
 
-## Wio Node‚Ì•”
+## Wio Nodeã®éƒ¨
 
-### Wi-FiƒAƒNƒZƒXƒ|ƒCƒ“ƒg‚ÉÚ‘±
+### Wi-Fiã‚¢ã‚¯ã‚»ã‚¹ãƒã‚¤ãƒ³ãƒˆã«æŽ¥ç¶š
 
-Wio Node‚ðÝ’è‚·‚éƒXƒ}[ƒgƒtƒHƒ“‚ðA‰ïê‚É—pˆÓ‚³‚ê‚½Wi-FiƒAƒNƒZƒXƒ|ƒCƒ“ƒg‚ÉÚ‘±‚µ‚Ä‚­‚¾‚³‚¢B  
-iŽ©“®Ú‘±‚É‚µ‚Ä‚¨‚­•K—v‚ª‚ ‚è‚Ü‚·Bj
+Wio Nodeã‚’è¨­å®šã™ã‚‹ã‚¹ãƒžãƒ¼ãƒˆãƒ•ã‚©ãƒ³ã‚’ã€ä¼šå ´ã«ç”¨æ„ã•ã‚ŒãŸWi-Fiã‚¢ã‚¯ã‚»ã‚¹ãƒã‚¤ãƒ³ãƒˆã«æŽ¥ç¶šã—ã¦ãã ã•ã„ã€‚  
+ï¼ˆè‡ªå‹•æŽ¥ç¶šã«ã—ã¦ãŠãå¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚ï¼‰
 
-### WioƒT[ƒo[‚ÉƒƒOƒCƒ“
+### Wioã‚µãƒ¼ãƒãƒ¼ã«ãƒ­ã‚°ã‚¤ãƒ³
 
-App Store‚Å`Wio Link`ƒAƒvƒŠ(ˆÈ~AWioƒAƒvƒŠ)‚ðŒŸõ‚µ‚ÄAƒCƒ“ƒXƒg[ƒ‹‚µ‚Ä‚­‚¾‚³‚¢B
+App Storeã§`Wio Link`ã‚¢ãƒ—ãƒª(ä»¥é™ã€Wioã‚¢ãƒ—ãƒª)ã‚’æ¤œç´¢ã—ã¦ã€ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¦ãã ã•ã„ã€‚
 
 ![26](img/26.PNG)
 
-WioƒAƒvƒŠ‚ð‹N“®‚µ‚ÄA`SIGN UP`ƒ^ƒu‚ð‘I‘ðAƒ[ƒ‹ƒAƒhƒŒƒX‚ÆƒpƒXƒ[ƒh‚ð“ü—Í‚µ‚ÄA`SIGN UP`ƒ{ƒ^ƒ“‚ðƒNƒŠƒbƒN‚µ‚Ä‚­‚¾‚³‚¢B  
-uŽt‚©‚çWioƒT[ƒo[‚ÌŽwŽ¦‚ª‚ ‚Á‚½ê‡‚ÍA‚±‚±‚ÅServer Location‚ð•ÏX‚µ‚Ä‚¨‚¢‚Ä‚­‚¾‚³‚¢B
+Wioã‚¢ãƒ—ãƒªã‚’èµ·å‹•ã—ã¦ã€`SIGN UP`ã‚¿ãƒ–ã‚’é¸æŠžã€ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã¨ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å…¥åŠ›ã—ã¦ã€`SIGN UP`ãƒœã‚¿ãƒ³ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ãã ã•ã„ã€‚  
+è¬›å¸«ã‹ã‚‰Wioã‚µãƒ¼ãƒãƒ¼ã®æŒ‡ç¤ºãŒã‚ã£ãŸå ´åˆã¯ã€ã“ã“ã§Server Locationã‚’å¤‰æ›´ã—ã¦ãŠã„ã¦ãã ã•ã„ã€‚
 
 ![27](img/27.png)
 ![28](img/28.png)
 
-### Wio NodeƒfƒoƒCƒX‚ð’Ç‰Á
+### Wio Nodeãƒ‡ãƒã‚¤ã‚¹ã‚’è¿½åŠ 
 
-WioƒAƒvƒŠ‚Ì`Device List`‰æ–Ê‚ÅA‰Eã‚Ìƒvƒ‰ƒXƒ}[ƒN‚ðƒNƒŠƒbƒN‚µ‚Ä‚­‚¾‚³‚¢B  
-‚»‚µ‚ÄA`Wio Node`‚ðƒNƒŠƒbƒN‚µ‚Ä‚­‚¾‚³‚¢B
+Wioã‚¢ãƒ—ãƒªã®`Device List`ç”»é¢ã§ã€å³ä¸Šã®ãƒ—ãƒ©ã‚¹ãƒžãƒ¼ã‚¯ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ãã ã•ã„ã€‚  
+ãã—ã¦ã€`Wio Node`ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ãã ã•ã„ã€‚
 
 ![29](img/29.png)
 ![30](img/30.png)
 
-‚·‚é‚ÆA`Setup Your Wio Node`‰æ–Ê‚ª•\Ž¦‚³‚ê‚Ü‚·B
+ã™ã‚‹ã¨ã€`Setup Your Wio Node`ç”»é¢ãŒè¡¨ç¤ºã•ã‚Œã¾ã™ã€‚
 
 ![31](img/31.png)
 
-Wio Node‚Ì`FUNC`ƒ{ƒ^ƒ“‚ð’·‰Ÿ‚µ‚µ‚ÄAÂFLED‚ªƒtƒƒtƒ‚Æ“_–Å‚·‚é‚±‚Æ‚ðŠm”F‚µ‚Ä‚­‚¾‚³‚¢B  
-i‚±‚±‚Å‚ÍAWio Node‚ªWi-FiƒAƒNƒZƒXƒ|ƒCƒ“ƒg‚Æ‚µ‚Ä“®ì‚·‚é‚æ‚¤Ý’è‚µ‚Ä‚¢‚Ü‚·Bj
+Wio Nodeã®`FUNC`ãƒœã‚¿ãƒ³ã‚’é•·æŠ¼ã—ã—ã¦ã€é’è‰²LEDãŒãƒ•ãƒ¯ãƒ•ãƒ¯ã¨ç‚¹æ»…ã™ã‚‹ã“ã¨ã‚’ç¢ºèªã—ã¦ãã ã•ã„ã€‚  
+ï¼ˆã“ã“ã§ã¯ã€Wio NodeãŒWi-Fiã‚¢ã‚¯ã‚»ã‚¹ãƒã‚¤ãƒ³ãƒˆã¨ã—ã¦å‹•ä½œã™ã‚‹ã‚ˆã†è¨­å®šã—ã¦ã„ã¾ã™ã€‚ï¼‰
 
 ![32](img/32.png)
 
-WioƒAƒvƒŠ‚Ì`Setup Your Wio Node`‰æ–Ê‚Í‚»‚Ì‚Ü‚Ü‚É‚µ‚Ä‚¨‚¢‚ÄAƒXƒ}[ƒgƒtƒHƒ“‚ÌWi-FiÝ’è‰æ–Ê‚ÅWio Node‚ÌƒAƒNƒZƒXƒ|ƒCƒ“ƒgi'Wio_xxxxxx'‚Æ‚¢‚¤–¼Ìj‚ÉÚ‘±‚µ‚Ä‚­‚¾‚³‚¢B
+Wioã‚¢ãƒ—ãƒªã®`Setup Your Wio Node`ç”»é¢ã¯ãã®ã¾ã¾ã«ã—ã¦ãŠã„ã¦ã€ã‚¹ãƒžãƒ¼ãƒˆãƒ•ã‚©ãƒ³ã®Wi-Fiè¨­å®šç”»é¢ã§Wio Nodeã®ã‚¢ã‚¯ã‚»ã‚¹ãƒã‚¤ãƒ³ãƒˆï¼ˆ'Wio_xxxxxx'ã¨ã„ã†åç§°ï¼‰ã«æŽ¥ç¶šã—ã¦ãã ã•ã„ã€‚
 
 ![33](img/33.png)
 
-WioƒAƒvƒŠ‚É–ß‚Á‚ÄA`Goto wifi list`‚ðƒNƒŠƒbƒN‚µ‚Ä‚­‚¾‚³‚¢B
+Wioã‚¢ãƒ—ãƒªã«æˆ»ã£ã¦ã€`Goto wifi list`ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ãã ã•ã„ã€‚
 
 ![34](img/34.png)
 
-‰ïê‚É—pˆÓ‚³‚ê‚½Wi-FiƒAƒNƒZƒXƒ|ƒCƒ“ƒg‚ð‘I‘ð‚µ‚ÄAƒpƒXƒ[ƒh‚ð“ü—ÍA`Join`‚ðƒNƒŠƒbƒN‚µ‚Ä‚­‚¾‚³‚¢B
+ä¼šå ´ã«ç”¨æ„ã•ã‚ŒãŸWi-Fiã‚¢ã‚¯ã‚»ã‚¹ãƒã‚¤ãƒ³ãƒˆã‚’é¸æŠžã—ã¦ã€ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å…¥åŠ›ã€`Join`ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ãã ã•ã„ã€‚
 
 ![35](img/35.png)
 ![36](img/36.png)
 
-Wio Node‚Ì–¼‘Oi”CˆÓj‚ð“ü—Í‚µ‚ÄA`Start Wio-ing'‚ðƒNƒŠƒbƒN‚µ‚Ä‚­‚¾‚³‚¢B
+Wio Nodeã®åå‰ï¼ˆä»»æ„ï¼‰ã‚’å…¥åŠ›ã—ã¦ã€`Start Wio-ing'ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ãã ã•ã„ã€‚
 
 ![37](img/37.png)
 
-’Ç‰Á‚µ‚½Wio Node‚ªˆê——‚É•\Ž¦‚³‚ê‚ê‚Î¬Œ÷‚Å‚·B
+è¿½åŠ ã—ãŸWio NodeãŒä¸€è¦§ã«è¡¨ç¤ºã•ã‚Œã‚Œã°æˆåŠŸã§ã™ã€‚
 
 ![38](img/38.png)
 
-### Wio NodeƒfƒoƒCƒX‚ÉLEDƒ‚ƒWƒ…[ƒ‹‚ð’Ç‰Á
+### Wio Nodeãƒ‡ãƒã‚¤ã‚¹ã«LEDãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’è¿½åŠ 
 
-Wio Node‚ðƒNƒŠƒbƒN‚µ‚Ä‚­‚¾‚³‚¢BWio NodeƒfƒoƒCƒX‚Ì‰æ–Ê‚É‚È‚è‚Ü‚·B  
-¶ƒRƒlƒNƒ^‚Ì`SELECT`‚ðƒNƒŠƒbƒN‚µ‚ÄA`OUTPUT`ƒ^ƒu‚Ì`Generic Digital Output`‚ðƒNƒŠƒbƒN‚µ‚Ä‚­‚¾‚³‚¢B  
-¶ƒRƒlƒNƒ^‚É“d‹…ƒ}[ƒN‚ª•\Ž¦‚³‚ê‚Ä‚¢‚é‚±‚Æ‚ðŠm”F‚µ‚Ä‚©‚çA`Update Firmware`ƒ{ƒ^ƒ“‚ðƒNƒŠƒbƒN‚µ‚Ä‚­‚¾‚³‚¢B
-‚»‚µ‚ÄA`OK`‚ðƒNƒŠƒbƒN‚µ‚Ä‚­‚¾‚³‚¢B
+Wio Nodeã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ãã ã•ã„ã€‚Wio Nodeãƒ‡ãƒã‚¤ã‚¹ã®ç”»é¢ã«ãªã‚Šã¾ã™ã€‚  
+å·¦ã‚³ãƒã‚¯ã‚¿ã®`SELECT`ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ã€`OUTPUT`ã‚¿ãƒ–ã®`Generic Digital Output`ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ãã ã•ã„ã€‚  
+å·¦ã‚³ãƒã‚¯ã‚¿ã«é›»çƒãƒžãƒ¼ã‚¯ãŒè¡¨ç¤ºã•ã‚Œã¦ã„ã‚‹ã“ã¨ã‚’ç¢ºèªã—ã¦ã‹ã‚‰ã€`Update Firmware`ãƒœã‚¿ãƒ³ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ãã ã•ã„ã€‚
+ãã—ã¦ã€`OK`ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ãã ã•ã„ã€‚
 
 ![39](img/39.png)
 ![40](img/40.png)
 ![41](img/41.png)
 
-¶ƒRƒlƒNƒ^‚É“d‹…ƒ}[ƒN‚ª•\Ž¦‚³‚ê‚Ä‚¢‚ÄA‰º‚Ìƒ{ƒ^ƒ“‚ª`View API`‚Æ•\Ž¦‚³‚ê‚Ä‚¢‚ê‚Î³í‚Å‚·B
+å·¦ã‚³ãƒã‚¯ã‚¿ã«é›»çƒãƒžãƒ¼ã‚¯ãŒè¡¨ç¤ºã•ã‚Œã¦ã„ã¦ã€ä¸‹ã®ãƒœã‚¿ãƒ³ãŒ`View API`ã¨è¡¨ç¤ºã•ã‚Œã¦ã„ã‚Œã°æ­£å¸¸ã§ã™ã€‚
 
 ![42](img/42.png)
 
-Wio Node‚Ì“dŒ¹iUSBƒP[ƒuƒ‹j‚ðŠO‚µ‚ÄA¶ƒRƒlƒNƒ^‚ÉGrove-LED‚ðÚ‘±AWio Node‚Ì“dŒ¹‚ð‚Â‚È‚¢‚Å‚­‚¾‚³‚¢B
+Wio Nodeã®é›»æºï¼ˆUSBã‚±ãƒ¼ãƒ–ãƒ«ï¼‰ã‚’å¤–ã—ã¦ã€å·¦ã‚³ãƒã‚¯ã‚¿ã«Grove-LEDã‚’æŽ¥ç¶šã€Wio Nodeã®é›»æºã‚’ã¤ãªã„ã§ãã ã•ã„ã€‚
 
 ![43](img/43.png)
 
-WioƒAƒvƒŠ‚Ì`View API`ƒ{ƒ^ƒ“‚ðƒNƒŠƒbƒN‚µ‚ÄA`.../GenericDOutD0/onoff/[onoff]?...`‚Æ‘‚©‚ê‚½ƒZƒNƒVƒ‡ƒ“‚Ì`Test Request`‚É`1`‚ð“ü—ÍA`POST`ƒ{ƒ^ƒ“‚ðƒNƒŠƒbƒN‚µ‚Ä‚­‚¾‚³‚¢B  
-‚·‚é‚ÆALED‚ª“_“”‚µ‚Ü‚·B  
-`Test Request`‚É`1`‚ð“ü—Í‚·‚é‚ÆLED“_“”A`Test Request`‚É`0`‚ð“ü—Í‚·‚é‚ÆLEDÁ“”‚Å‚·B
-“_“”/Á“”‚Å‚«‚é‚©ŽŽ‚µ‚Ä‚­‚¾‚³‚¢B
+Wioã‚¢ãƒ—ãƒªã®`View API`ãƒœã‚¿ãƒ³ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ã€`.../GenericDOutD0/onoff/[onoff]?...`ã¨æ›¸ã‹ã‚ŒãŸã‚»ã‚¯ã‚·ãƒ§ãƒ³ã®`Test Request`ã«`1`ã‚’å…¥åŠ›ã€`POST`ãƒœã‚¿ãƒ³ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ãã ã•ã„ã€‚  
+ã™ã‚‹ã¨ã€LEDãŒç‚¹ç¯ã—ã¾ã™ã€‚  
+`Test Request`ã«`1`ã‚’å…¥åŠ›ã™ã‚‹ã¨LEDç‚¹ç¯ã€`Test Request`ã«`0`ã‚’å…¥åŠ›ã™ã‚‹ã¨LEDæ¶ˆç¯ã§ã™ã€‚
+ç‚¹ç¯/æ¶ˆç¯ã§ãã‚‹ã‹è©¦ã—ã¦ãã ã•ã„ã€‚
 
 ![44](img/44.png)
 ![45](img/45.png)
 
-### ƒpƒ\ƒRƒ“‚©‚çLED‚ð§Œä
+### ãƒ‘ã‚½ã‚³ãƒ³ã‹ã‚‰LEDã‚’åˆ¶å¾¡
 
-ƒpƒ\ƒRƒ“‚ÌWebƒuƒ‰ƒEƒU‚ÅA`(WioƒT[ƒo[URL)/v1/node/resources?access_token=(ƒAƒNƒZƒXƒg[ƒNƒ“)`‚ðŠJ‚¢‚Ä‚­‚¾‚³‚¢B  
-`(WioƒT[ƒo[URL)`‚ÍWioƒAƒvƒŠ‚ÌSetting‰æ–Ê‚É•\Ž¦‚³‚ê‚½’lA`(ƒAƒNƒZƒXƒg[ƒNƒ“)`‚ÍView API‰æ–Ê‚Å•\Ž¦‚³‚ê‚½access_token‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B  
-‚·‚é‚ÆAWebƒuƒ‰ƒEƒU‚ÉWioƒAƒvƒŠ‚ÌView API‚Æ“¯‚¶‰æ–Ê‚ª•\Ž¦‚³‚ê‚Ü‚·B
-`.../GenericDOutD0/onoff/[onoff]?...`‚Æ‘‚©‚ê‚½ƒZƒNƒVƒ‡ƒ“‚ÅALED‚ð“_“”/Á“”‚Å‚«‚é‚©ŽŽ‚µ‚Ä‚­‚¾‚³‚¢B
+ãƒ‘ã‚½ã‚³ãƒ³ã®Webãƒ–ãƒ©ã‚¦ã‚¶ã§ã€`(Wioã‚µãƒ¼ãƒãƒ¼URL)/v1/node/resources?access_token=(ã‚¢ã‚¯ã‚»ã‚¹ãƒˆãƒ¼ã‚¯ãƒ³)`ã‚’é–‹ã„ã¦ãã ã•ã„ã€‚  
+`(Wioã‚µãƒ¼ãƒãƒ¼URL)`ã¯Wioã‚¢ãƒ—ãƒªã®Settingç”»é¢ã«è¡¨ç¤ºã•ã‚ŒãŸå€¤ã€`(ã‚¢ã‚¯ã‚»ã‚¹ãƒˆãƒ¼ã‚¯ãƒ³)`ã¯View APIç”»é¢ã§è¡¨ç¤ºã•ã‚ŒãŸaccess_tokenã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚  
+ã™ã‚‹ã¨ã€Webãƒ–ãƒ©ã‚¦ã‚¶ã«Wioã‚¢ãƒ—ãƒªã®View APIã¨åŒã˜ç”»é¢ãŒè¡¨ç¤ºã•ã‚Œã¾ã™ã€‚
+`.../GenericDOutD0/onoff/[onoff]?...`ã¨æ›¸ã‹ã‚ŒãŸã‚»ã‚¯ã‚·ãƒ§ãƒ³ã§ã€LEDã‚’ç‚¹ç¯/æ¶ˆç¯ã§ãã‚‹ã‹è©¦ã—ã¦ãã ã•ã„ã€‚
 
 ![46](img/46.png)
