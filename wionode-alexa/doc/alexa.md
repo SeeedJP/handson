@@ -61,28 +61,20 @@ Lambda の管理画面で [関数の作成] ボタンを押します。
 
 ![9](img/9.png)
 
-ソースコードの次の箇所を対象 WioNode を操作するためのURLに変更します。
+ソースコードの次の箇所を対象 WioNode の値に変更します。
 
 |ソースコードの箇所|変更例|
 |:--|:--|
-|https:// ノードをONにするURLを設定|https://us.wio.seeed.io/v1/node/GenericDOutD0/onoff/1?access_token=211514b3c26026f64cb9b8e81a5b3fe8|
-|https:// ノードをOFFにするURLを設定|https://us.wio.seeed.io/v1/node/GenericDOutD0/onoff/0?access_token=211514b3c26026f64cb9b8e81a5b3fe8|
-|https:// ノードの状態を取得するURLを設定|https://us.wio.seeed.io/v1/node/GenericDOutD0/onoff_status?access_token=211514b3c26026f64cb9b8e81a5b3fe8|
+|WIO_SERVER_URL|https://us.wio.seeed.io|
+|NODE_TOKEN|8b0283811a669b90b7f3b8793454aaaa|
+|GENERIC_DOUT_PORT|D0|
 
 ```python
 　　　　　　：　　　　　　　　　　：
 
-if request_name == "TurnOn":
-	value = "ON"
-	status_code, body = sendHTTPRequest("https:// ノードをONにするURLを設定","POST")
-else:
-	value = "OFF"
-	status_code, body = sendHTTPRequest("https:// ノードをOFFにするURLを設定","POST")
-
-　　　　　　：　　　　　　　　　　：
-
-if request_name == "ReportState":
-	status_code, body = sendHTTPRequest("https:// ノードの状態を取得するURLを設定")
+WIO_SERVER_URL = "https://us.wio.seeed.io"
+NODE_TOKEN = "8b0283811a669b90b7f3b8793454aaaa"
+GENERIC_DOUT_PORT = "D0"
 
 　　　　　　：　　　　　　　　　　：
 
@@ -188,8 +180,8 @@ https://alexa.amazon.co.jp/
 
 Alexa デバイスに次のように発話することで WioNodeデバイスを操作できます。
 
-「アレクサ、スイッチをつけて」  
-「アレクサ、スイッチをオフ」
+「アレクサ、テレビをつけて」  
+「アレクサ、テレビをオフ」
 
 Alexaアプリからもデバイスの操作、状態の確認ができます。
 
@@ -208,19 +200,14 @@ Alexaアプリからもデバイスの操作、状態の確認ができます。
 
 SAMPLE_APPLIANCES = [
 	{
+		"endpointId": "111-11111-11111-1001",
+		"friendlyName": "テレビ",
+		"manufacturerName": "Seeed",
+		"description": "Wio Nodeの汎用デジタル出力",
+		"displayCategories": [
+			"SWITCH"
+		],
 		"capabilities": [
-			{
-				"type": "AlexaInterface",
-				"interface": "Alexa.EndpointHealth",
-				"version": "3",
-				"properties": {
-					"supported":[
-						{ "name":"connectivity" }
-					],
-					"proactivelyReported": False,
-					"retrievable": True
-				}
-			},
 			{
 				"type": "AlexaInterface",
 				"interface": "Alexa.PowerController",
@@ -232,17 +219,23 @@ SAMPLE_APPLIANCES = [
 					"proactivelyReported": False,
 					"retrievable": True
 				}
+			},
+			{
+				"type": "AlexaInterface",
+				"interface": "Alexa.EndpointHealth",
+				"version": "3",
+				"properties": {
+					"supported":[
+						{ "name":"connectivity" }
+					],
+					"proactivelyReported": False,
+					"retrievable": True
+				}
 			}
 		],
-		"description": "スマートデバイスカンパニーのスマートプラグ",
-		"displayCategories": [
-			"SWITCH"
-		],
-		"endpointId": "111-11111-11111-1001",
-		"friendlyName": "スイッチ",
-		"manufacturerName": "スマートデバイスカンパニー"
 	}
 ]
+
 　　　　：　　　　　　　　　　　　　　：
 ```
 
@@ -265,19 +258,20 @@ def handleNonDiscovery(request):
 	request_namespace = request["directive"]["header"]["namespace"]
 	request_name = request["directive"]["header"]["name"]
 
-	if request_namespace == "Alexa.PowerController":
+　　　　：　　　　　　　　　　　　　　：
+
+	elif request_namespace == "Alexa.PowerController":
 
 		#Do action
 
 		if request_name == "TurnOn":
 			value = "ON"
-			status_code, body = sendHTTPRequest("https:// ノードをONにするURLを設定","POST")
+			status_code, body = sendHTTPRequest(TURN_ON_URL, "POST")
 		else:
 			value = "OFF"
-			status_code, body = sendHTTPRequest("https:// ノードをOFFにするURLを設定","POST")
+			status_code, body = sendHTTPRequest(TURN_OFF_URL, "POST")
 
 		#Do action end
-
 
 		if (status_code == 200 and body["result"].upper() == "OK"):
 			response = {
@@ -315,6 +309,7 @@ def handleNonDiscovery(request):
 			## TODO: error response
 			pass
 
+
 　　　　：　　　　　　　　　　　　　　：
 ```
 
@@ -339,12 +334,19 @@ Alexa はユーザーデバイスの状態を把握し、その状態情報を�
 
 	elif request_namespace == "Alexa":
 		if request_name == "ReportState":
-			status_code, body = sendHTTPRequest("https:// ノードの状態を取得するURLを設定")
+			status_code, body = sendHTTPRequest(GET_STATUS_URL)
 			if (status_code == 200):
 				value = "ON" if body["onoff"] == 1 else "OFF"
 				response = {
 					"context": {
 						"properties": [
+							{
+								"namespace": "Alexa.PowerController",
+								"name": "powerState",
+								"value": value,
+								"timeOfSample": get_utc_timestamp(),
+								"uncertaintyInMilliseconds": 500
+							},
 							{
 								"namespace": "Alexa.EndpointHealth",
 								"name": "connectivity",
@@ -353,13 +355,6 @@ Alexa はユーザーデバイスの状態を把握し、その状態情報を�
 								},
 								"timeOfSample": get_utc_timestamp(),
 								"uncertaintyInMilliseconds": 200
-							},
-							{
-								"namespace": "Alexa.PowerController",
-								"name": "powerState",
-								"value": value,
-								"timeOfSample": get_utc_timestamp(),
-								"uncertaintyInMilliseconds": 500
 							}
 						]
 					},
@@ -382,9 +377,9 @@ Alexa はユーザーデバイスの状態を把握し、その状態情報を�
 					}
 				}
 				return response
-			else:
-				## TODO: error response
-				pass
+
+　　　　：　　　　　　　　　　　　　　：
+
 ```
 
 プロアクティブ型の状態レポートは今回は実装を完了させていません。  
