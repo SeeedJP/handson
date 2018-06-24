@@ -66,14 +66,14 @@ Lambda の管理画面で [関数の作成] ボタンを押します。
 |ソースコードの箇所|変更例|
 |:--|:--|
 |WIO_SERVER_URL|https://us.wio.seeed.io|
-|NODE_TOKEN|8b0283811a669b90b7f3b8793454aaaa|
+|NODE_TOKEN|自分のWioNodeのアクセストークン　([WioアプリのView_API画面からコピペ](/wionode-alexa/doc/wionode.md#wio-nodeデバイスにledモジュールを追加)）|
 |GENERIC_DOUT_PORT|D0|
 
 ```python
 　　　　　　：　　　　　　　　　　：
 
 WIO_SERVER_URL = "https://us.wio.seeed.io"
-NODE_TOKEN = "8b0283811a669b90b7f3b8793454aaaa"
+NODE_TOKEN = "(例)8b0283811a669b90b7f3b8793454aaaa"
 GENERIC_DOUT_PORT = "D0"
 
 　　　　　　：　　　　　　　　　　：
