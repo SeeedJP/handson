@@ -19,12 +19,6 @@ from oauth2.datatype import AccessToken
 from tornado.ioloop import IOLoop
 from tornado.web import Application, url
 
-from tornado.web import RequestHandler
-import urllib2
-import json
-
-WIO_SERVER_URL = "https://us.wio.seeed.io"
-
 logging.basicConfig(level=logging.DEBUG)
 
 class TestSiteAdapter(AuthorizationCodeGrantSiteAdapter):
@@ -67,18 +61,6 @@ class TestSiteAdapter(AuthorizationCodeGrantSiteAdapter):
     def user_has_denied_access(self, request):
         return False
 
-class DiscoverHandler(RequestHandler):
-    def get(self):
-        access_token = self.get_argument("access_token")
-        nodes_obj = HttpGetObject("{}/v1/nodes/list?access_token={}".format(WIO_SERVER_URL, access_token))
-        dis_obj = []
-        for node in nodes_obj["nodes"]:
-            node_obj = HttpGetObject("{}/v1/node/config?access_token={}".format(WIO_SERVER_URL, node["node_key"]))
-            for connection in node_obj["config"]["connections"]:
-                dis_obj.append({"name":node["name"], "sn":node["node_sn"], "con_port":connection["port"], "con_sku":connection["sku"]})
-        dis_text = json.dumps(dis_obj)
-        self.write(dis_text)
-
 def HttpGetObject(url):
     req = urllib2.Request(url)
     res = urllib2.urlopen(req)
@@ -89,7 +71,7 @@ def HttpGetObject(url):
 #auth_url : https://wioserver.southeastasia.cloudapp.azure.com/oa/authorize
 #token_url : https://wioserver.southeastasia.cloudapp.azure.com/oa/token
 
-def run_auth_server():
+def create_auth_server():
     client_store = ClientStore()
     client_store.add_client(client_id="alexa.matsuoka", client_secret="xxxx", redirect_uris=["https://layla.amazon.com/api/skill/link/M2Q7FOC6AVxxxx", "https://pitangui.amazon.com/api/skill/link/M2Q7FOC6AVxxxx", "https://alexa.amazon.co.jp/api/skill/link/M2Q7FOC6AVxxxx"])
 
@@ -99,17 +81,20 @@ def run_auth_server():
     provider = Provider(access_token_store=token_store, auth_code_store=token_store, client_store=client_store, token_generator=Uuid4(),client_authentication_source=http_basic_auth)
     provider.add_grant(AuthorizationCodeGrant(site_adapter=TestSiteAdapter(), unique_token=True))
 
+    app = Application([
+        url(provider.authorize_path, OAuth2Handler, dict(provider=provider)),
+        url(provider.token_path, OAuth2Handler, dict(provider=provider)),
+    ], debug = False)
+
+    return app
+
+def run_auth_server():
+    server = create_auth_server()
+    server.listen(8082)
+    print("Starting OAuth2 server on http://localhost:8082/...")
+
     try:
-        app = Application([
-            url(provider.authorize_path, OAuth2Handler, dict(provider=provider)),
-            url(provider.token_path, OAuth2Handler, dict(provider=provider)),
-#            ("/discover", DiscoverHandler),
-        ], debug = False)
-
-        app.listen(8082)
-        print("Starting OAuth2 server on http://localhost:8082/...")
         IOLoop.current().start()
-
     except KeyboardInterrupt:
         IOLoop.close()
 
