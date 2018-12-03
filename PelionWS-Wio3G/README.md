@@ -11,6 +11,7 @@
 
 本ワークショップではターミナルソフトを使用して IoT デバイスからのメッセージをモニタします。[Teraterm](https://ja.osdn.net/projects/ttssh2/) (Windows)、 [Coolterm](http://freeware.the-meiers.org) (Windows/macOS/Linux) などのターミナルソフトをインストールしてください。
 
+また、Windows 8以前のWindowsでは、[Windows serial driver](https://os.mbed.com/docs/v5.9/tutorials/windows-serial-driver.html)が必要です。ドライバのインストールは、のちほどWio 3GをPCに接続するときに行ってください。
 
 
 
@@ -120,7 +121,7 @@ main.cppの14行目に
 
 ## ボードとパソコンを接続する
 
-ボードとパソコンを USB ケーブルで接続します。 
+ボードとパソコンを USB ケーブルで接続します。Windows 8以前のWindowsでは、[Windows serial driver](https://os.mbed.com/docs/v5.9/tutorials/windows-serial-driver.html)が必要です。
 
 
 ## シリアルモニタを接続する
