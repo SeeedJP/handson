@@ -18,7 +18,7 @@
 
 本ワークショップでは Mbed オンラインコンパイラを使用します。アカウントをお持ちでない方は、事前に以下のサインアップページから登録を済ませておいてください。
 
-https://os.mbed.com/account/signup/
+[https://os.mbed.com/account/signup/](https://os.mbed.com/account/signup/)
 
 Eメールアドレスの確認まで済ませてください。Eメールアドレスの確認が済んでいないと、次のフリートライアルの申請でエラーが起きます。
 
@@ -28,7 +28,7 @@ Eメールアドレスの確認まで済ませてください。Eメールアド
 
 本ワークショップでは Pelion Device Management を使用します。 Pelion Device Management のフリートライアルを以下のページから申請してください。申請には上で作成した Mbed アカウントでのログインが必要です。
 
-https://console.mbed.com/cloud-registration
+[https://console.mbed.com/cloud-registration](https://console.mbed.com/cloud-registration)
 
 必須項目を入力して *Submit* すると、 Pelion Device Management Portal へと画面が遷移します。途中でログイン画面になりますので、*Log in with Mbed.com* ボタンをクリックしてください。
 
@@ -59,7 +59,7 @@ Mbed.com にログインした状態で以下の作業を行います。
 
 次のページを開いてください。
 
-https://os.mbed.com/platforms/Seeed-Wio-3G/
+[https://os.mbed.com/platforms/Seeed-Wio-3G/](https://os.mbed.com/platforms/Seeed-Wio-3G/)
 
 画面右にある **Add to your Mbed Compiler** をクリックしてください。
 
@@ -79,7 +79,7 @@ https://os.mbed.com/platforms/Seeed-Wio-3G/
 
 オンラインコンパイラのワークスペースにプロジェクトをインポートします。Mbed サイトのログインした状態で、次のページの右にある黄色いボタン *Import into Compiler* をクリックしてください。
 
-https://os.mbed.com/teams/Seeed/code/Wio_3G-example-sd-driver/?platform=Seeed-Wio-3G
+[https://os.mbed.com/teams/Seeed/code/Wio_3G-example-sd-driver/?platform=Seeed-Wio-3G](https://os.mbed.com/teams/Seeed/code/Wio_3G-example-sd-driver/?platform=Seeed-Wio-3G)
 
 
 
@@ -157,7 +157,7 @@ Pelion Device Management と連携するために必要な Pelion Device Managem
 
 オンラインコンパイラのワークスペースにプロジェクトをインポートします。Mbed サイトのログインした状態で、次のページの右にある黄色いボタン *Import into Compiler* をクリックしてください。
 
-https://os.mbed.com/teams/Seeed/code/simple-mbed-cloud-example-wio_3g/?platform=Seeed-Wio-3G
+[https://os.mbed.com/teams/Seeed/code/simple-mbed-cloud-example-wio_3g/?platform=Seeed-Wio-3G](https://os.mbed.com/teams/Seeed/code/simple-mbed-cloud-example-wio_3g/?platform=Seeed-Wio-3G)
 
 <img src="img/import.png" width="800" />
 
@@ -350,7 +350,7 @@ Simulated button clicked 9 times
 
 Pelion Device Management Portal 上で、デバイスツリーにデバイスが登録されていることを確認してみましょう。次のページを開いてください。
 
-https://portal.mbedcloud.com/
+[https://portal.mbedcloud.com/](https://portal.mbedcloud.com/)
 
 途中、ログインを求められたときは`Mbed.com accountでログイン`をクリックして、
 
@@ -369,7 +369,7 @@ https://portal.mbedcloud.com/
 
 <img src="img/device_detail.png" width="800" />
 
-IoT デバイスに登録されているリソース一覧が表示されます。この中から `button_count` ( `/3200/0/5501` ) というリソースを探し、クリックしてください。このリソースは IoT デバイス上の `USER` ボタン（青いボタン）に対応します。
+IoT デバイスに登録されているリソース一覧が表示されます。この中から `button_count` ( `/3200/0/5501` ) というリソースを探し、クリックしてください。
 
 <img src="img/resource_list.png" width="800" />
 
