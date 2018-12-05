@@ -49,6 +49,15 @@ void fake_button_press() {
     printf("Simulated button clicked %d times\n", v);
 }
 
+// This function gets triggered by the timer. It's easy to replace it by an InterruptIn and fall() mode on a real button
+void button_press() {
+    int v = button_res->get_value_int() + 1;
+
+    button_res->set_value(v);
+
+    printf("Button clicked %d times\n", v);
+}
+
 /**
  * PUT handler
  * @param resource The resource that triggered the callback
@@ -157,12 +166,15 @@ int main(void) {
 
     // Register with Mbed Cloud
     client.register_and_connect();
-
+    
+    InterruptIn userButton(D38);
+    userButton.rise(eventQueue.event(button_press));
+/*
     // Placeholder for callback to update local resource when GET comes.
     // The timer fires on an interrupt context, but debounces it to the eventqueue, so it's safe to do network operations
     Ticker timer;
     timer.attach(eventQueue.event(&fake_button_press), 5.0);
-
+*/
     // You can easily run the eventQueue in a separate thread if required
     eventQueue.dispatch_forever();
 }
