@@ -399,3 +399,4 @@ GroveのボタンをD38のコネクタに接続することで、D38ピンにプ
     InterruptIn userButton(D38);
 ```
 
+実装例は、 [https://github.com/SeeedJP/handson/commit/89e75ca099e86617fe0b6674a210201cea55dad4](https://github.com/SeeedJP/handson/commit/89e75ca099e86617fe0b6674a210201cea55dad4)のdiffを見てみてください。
